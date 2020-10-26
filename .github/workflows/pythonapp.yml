@@ -18,5 +18,5 @@ jobs:
     - name: Lint with Pylint
       run: |
         pip install pylint
-        pylint --output-format=parseable --exit-zero src ./violations.py
+        pylint --output-format=parseable --exit-zero ./violations.py
 
