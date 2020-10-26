@@ -1,15 +1,15 @@
 {
   "problemMatcher": [
     {
-      "owner": "flake8-warning",
+      "owner": "pylint-warning",
       "severity": "warning",
       "pattern": [
         {
-          "regexp": "^([^:]+):(\\d+):(\\d+):\\s+([CFNW]\\d+\\s+.+)$",
+          "regexp": "^(.+?):([0-9]+): \[([^E|F][0-9]+)\((.*)\), (.*)\] (.*)$",
           "file": 1,
           "line": 2,
-          "column": 3,
-          "message": 4
+          "code": 3,
+          "message": 6
         }
       ]
     }
