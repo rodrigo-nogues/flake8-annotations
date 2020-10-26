@@ -1,4 +1,4 @@
-import time
+import time, os
 
 def violation(ARG): 
     if ARG:
