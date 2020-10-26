@@ -3,7 +3,7 @@ name: Python application
 on: [push]
 
 jobs:
-  flake8:
+  pylint:
 
     runs-on: ubuntu-latest
 
