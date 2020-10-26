@@ -1,6 +1,6 @@
-name: 'Flake8 Annotator'
-author: 'Raphael Bialon'
-description: 'Annotate PRs with flake8 errors and warnings from Github checks output'
+name: 'Pylint Annotator'
+author: 'Rodrigo Nogues'
+description: 'Annotate PRs with Pylint errors and warnings from Github checks output'
 runs:
   using: 'node12'
   main: 'index.js'
