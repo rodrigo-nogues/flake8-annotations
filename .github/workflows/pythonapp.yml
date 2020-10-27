@@ -3,7 +3,7 @@ name: Python application
 on: [push]
 
 jobs:
-  flake8:
+  pylint:
 
     runs-on: ubuntu-latest
 
@@ -13,11 +13,10 @@ jobs:
       uses: actions/setup-python@v1
       with:
         python-version: 3.8
-    - name: Setup flake8 annotations
-      uses: rbialon/flake8-annotations@v1
-    - name: Lint with flake8
+    - name: Setup Pylint annotations
+      uses: rodrigo-nogues/pylint-annotations@v1
+    - name: Lint with Pylint
       run: |
-        pip install flake8 pep8-naming
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 ./violations.py --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+        pip install pylint
+        pylint --output-format=parseable --exit-zero ./violations.py
 
